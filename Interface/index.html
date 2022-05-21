@@ -15,64 +15,47 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
+  
+  
+  <!-- sidebar Section -->
   <body>
-    <!-- Navbar Section -->
-    <nav class="navbar">
+
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>Menu</header>
+      <a href="#" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Home</span>
+      </a>
+      <a href="#">
+         <i class="fas fa-calendar"></i>
+        <span>Calendar</span>
+      </a>
+      <a href="#">
+        <i class="fas fa-bullseye"></i>
+        <span>Room</span>
+      </a>
+      <a href="#">
+        <i class="far fa-question-circle"></i>
+        <span>...</span>
+      </a>
+    </div>
+    
+    
+<!-- Navbar Section -->
       <div class="navbar__container">
         <a href="https://noi.bz.it/en" id="navbar__logo" target="_blank"><img src="https://noi.bz.it/themes/custom/noi_techpark/logo_bn.svg"></a>
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span> <span class="bar"></span>
           <span class="bar"></span>
         </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="https://noi.bz.it/en" class="navbar__links" target="_blank">Home</a>
-          </li>
-          <li class="navbar__item">
-            <a href="https://noi.bz.it/en/about-us" class="navbar__links" target="_blank">About us</a>
-          </li>
-          <li class="navbar__item">
-            <a href="https://noi.bz.it/en/contact-map" class="navbar__links" target="_blank">Contact</a>
-          </li>
-        </ul>
       </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <!--
-    <div class="main">
-      <div class="main__container">
-        <div class="main__content">
-          <h1>NOI TECHPARK | EVENTS</h1>
-          <h2>Sudtirol/Alto Adige</h2>
-          <p>Find every meeting and activity at NOI TECHPARK</p>
-          <button class="main__btn"><a href="#">Get Started</a></button>
-        </div>
-        <div class="main__img--container">
-          <img id="main__img" src="images/pic1.svg" />
-        </div>
-      </div>
-    </div>
-           -->
-    <!-- Services Section -->
-
-    <!--<div class="services">
-      <h1>See what the hype is about</h1>
-      <div class="services__container">
-        <div class="services__card">
-          <h2>Experience Bliss</h2>
-          <p>AI Powered technology</p>
-          <button>Get Started</button>
-        </div>
-        <div class="services__card">
-          <h2>Are you Ready?</h2>
-          <p>Take the leap</p>
-          <button>Get Started</button>
-        </div>
-      </div>
-    </div>
-  -->
 
     <!-- Footer Section -->
   
@@ -88,18 +71,26 @@
       <section class="social__media">
         <div class="social__media--wrap">
           <div class="footer__logo">
-            <a href="/" id="footer__logo"><i class="fas fa-dragon"></i>PowerCouple</a>
+            <a href="/" id="footer__logo"><i class="fas fa-rocket"></i>PowerCouple</a>
           </div>
           <p class="website__rights">© PowerCouple 2022. All rights reserved</p>
           <div class="social__icons">
             <a
             class="social__icon--link"
-            href="/"
+            href="https://www.linkedin.com/in/nicol%C3%B2-tonello-8b0591222/"
             target="_blank"
             aria-label="LinkedIn"
           >
             <i class="fab fa-linkedin"></i>
           </a>
+          <a
+          class="social__icon--link"
+          href="https://www.linkedin.com/in/martina-burlando-45a213176/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
           <a
           class="social__icon--link"
           href="https://github.com/pandamarty/oph-2022"
