@@ -1,23 +1,20 @@
 initApp();
-let today = new Date();
-today.setHours(0);
-today.setMinutes(0);
-today.setSeconds(0);
 
 function initApp() {
   /* Initial filter for home page */
-  displayHomeCards(
+  $("#home").click(function () {});
+  /*displayHomeCards(
     "https://tourism.opendatahub.bz.it/v1/EventShort?pagenumber=1&sortorder=ASC&optimizedates=true&removenullvalues=true"
-  );
+  );*/
   /* Filter "by date" */
   /*displayDateCards(
     "https://tourism.opendatahub.bz.it/v1/EventShort?pagenumber=1&sortorder=DESC&optimizedates=true&removenullvalues=true"
   );*/
 
   /* Filter by room */
-  /*displayRoomCards(
+  displayRoomCards(
     'https://tourism.api.opendatahub.bz.it/v1/EventShort/GetByRoomBooked?rawfilter=in(RoomBooked.[*].SpaceDesc,"NOI Seminar 1")'
-  );*/
+  );
 }
 
 function displayHomeCards(url) {
@@ -32,7 +29,7 @@ function displayHomeCards(url) {
       var correctedDate = new Date(date).toDateString();
 
       var card = `<div class="column">
-                              <div class="card" style="width: 18rem; height: auto">
+                              <div class="card" style="width: 18rem; height: 20rem;">
                             <div class="card-body">
                                 <h5 class="card-title">${correctedDes}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">${itemList[i].CompanyName}</h6>
@@ -77,9 +74,9 @@ function displayRoomCards(url) {
     var content = document.getElementById("cards");
 
     for (var i = 0; i < 10; i++) {
-      var description = data[i].EventDescription;
+      var description = data[i].EventDescriptionEN;
       var correctedDes = description.toUpperCase();
-      var date = itemList[i].StartDate;
+      var date = data[i].RoomStartDate;
       var correctedDate = new Date(date).toDateString();
 
       var card = `<div class="column">
@@ -87,7 +84,7 @@ function displayRoomCards(url) {
                         <div class="card-body">
                             <h5 class="card-title">${correctedDes}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">${data[i].CompanyName}</h6>
-                            <p class="card-text">${data[i].AnchorVenueRoomMapping}</p>
+                            <p class="card-text">${data[i].SpaceDesc}</p>
                             <p class="card-text">${correctedDate}</p>
                         </div>
                     </div>
